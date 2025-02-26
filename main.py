@@ -1,4 +1,3 @@
-import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.ensemble import GradientBoostingClassifier, VotingClassifier, StackingClassifier, AdaBoostClassifier, ExtraTreesClassifier
 from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
@@ -6,7 +5,6 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.svm import SVC
 from sklearn.dummy import DummyClassifier
-from sklearn.linear_model import LogisticRegression
 from lightgbm import LGBMClassifier
 from catboost import CatBoostClassifier
 from xgboost import XGBClassifier
@@ -20,7 +18,7 @@ if __name__ == "__main__":
     try:
         # Загрузка данных
         loader = DataLoader()
-        loader.load_csv("data/schizophrenia_dataset.csv")  # Укажите путь к вашему датасету
+        loader.load_csv("data/schizophrenia_dataset.csv")
         loader.data.rename(columns={
             'Hasta_ID': 'Id',
             'Yaş': 'Age',
